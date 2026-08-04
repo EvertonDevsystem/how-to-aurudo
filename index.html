@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guia HTML - Tags Principais e Uso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #1f2937;
+            padding: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.amenizado {
+            background-color: #f8fafc;
+            color: #4b5563;
+        }
+        body.amenizado section {
+            background-color: #ffffff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        body.amenizado .tag {
+            background-color: #fef7ed;
+            color: #c2410c;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .botoes-topo {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        button, .botao {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        #btnAmenizar {
+            background-color: #f97316;
+            color: white;
+        }
+        #btnAmenizar.ativo {
+            background-color: #10b981;
+        }
+        #btnGuiaRapido {
+            background-color: #7c3aed;
+            color: white;
+        }
+        .botao-cartao {
+            background-color: #8B0000;
+            color: white;
+        }
+        button:hover, .botao:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+
+        #guiaRapido {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 18px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            display: none;
+        }
+        #guiaRapido.mostrar {
+            display: block;
+        }
+        #guiaRapido h3 {
+            color: #1e40af;
+            margin-bottom: 12px;
+        }
+        #guiaRapido ul {
+            columns: 2;
+            -webkit-columns: 2;
+            gap: 15px;
+        }
+
+        section {
+            background: white;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #1e40af;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #bfdbfe;
+            padding-bottom: 5px;
+            font-size: 1.4rem;
+        }
+        .tag {
+            font-family: 'Courier New', Courier, monospace;
+            color: #dc2626;
+            font-weight: bold;
+            background: #fef2f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        .exemplo {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 0 6px 6px 0;
+            overflow-x: auto;
+        }
+        .ilustracao {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
+        }
+        ul {
+            margin-left: 22px;
+            margin-bottom: 8px;
+        }
+        footer {
+            text-align: center;
+            color: #64748b;
+            margin-top: 30px;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            header h1 { font-size: 1.5rem; }
+            #guiaRapido ul { columns: 1; -webkit-columns: 1; }
+            button, .botao { font-size: 14px; padding: 8px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Guia HTML - Tags Principais e Uso</h1>
+</header>
+
+<div class="botoes-topo">
+    <button id="btnGuiaRapido">Ver a aura resumidona</button>
+    <a href="cartao.html" class="botao botao-cartao">📇 Meu Cartão de Apresentação</a>
+</div>
+
+<div id="guiaRapido">
+    <h3>As tag mais usadas ae</h3>
+    <ul>
+        <li><span class="tag">&lt;!DOCTYPE html&gt;</span> → Define versão HTML5</li>
+        <li><span class="tag">&lt;html&gt;</span> → Raiz da página</li>
+        <li><span class="tag">&lt;head&gt;</span> → Configurações</li>
+        <li><span class="tag">&lt;body&gt;</span> → Conteúdo visível</li>
+        <li><span class="tag">&lt;h1&gt;-&lt;h6&gt;</span> → Títulos por ordem</li>
+        <li><span class="tag">&lt;p&gt;</span> → Parágrafo</li>
+        <li><span class="tag">&lt;a&gt;</span> → Link</li>
+        <li><span class="tag">&lt;img&gt;</span> → Imagem</li>
+        <li><span class="tag">&lt;ul&gt;/&lt;ol&gt;</span> → Lista</li>
+        <li><span class="tag">&lt;div&gt;</span> → Agrupar elementos</li>
+        <li><span class="tag">&lt;form&gt;</span> → Formulário</li>
+        <li><span class="tag">&lt;input&gt;</span> → Campo de dados</li>
+        <li><span class="tag">&lt;button&gt;</span> → Botão</li>
+        <li><span class="tag">&lt;header&gt;</span> → Cabeçalho</li>
+        <li><span class="tag">&lt;footer&gt;</span> → Rodapé</li>
+    </ul>
+</div>
+
+<section>
+    <h2>Tags aurudas (Obrigatórias)</h2>
+    <p>São a base de qualquer página — sem elas o navegador não interpreta o conteúdo corretamente.</p>
+    <br>
+    <p><span class="tag">&lt;!DOCTYPE html&gt;</span></p>
+    <ul>
+        <li>Para que serve: Avisa o navegador que usamos HTML5</li>
+        <li>Como usar: Sempre na 1ª linha, sem fechar</li>
+    </ul>
+    <p><span class="tag">&lt;html lang="pt-BR"&gt;</span></p>
+    <ul>
+        <li>Para que serve: Envolve todo o código; define o idioma da página</li>
+        <li>Como usar: Abre logo após o doctype e fecha por último</li>
+    </ul>
+    <p><span class="tag">&lt;head&gt;</span></p>
+    <ul>
+        <li>Para que serve: Título, codificação, estilos e configurações</li>
+        <li>Como usar: Antes do conteúdo visível</li>
+    </ul>
+    <p><span class="tag">&lt;body&gt;</span></p>
+    <ul>
+        <li>Para que serve: Todo o que aparece na tela</li>
+        <li>Como usar: Apenas uma vez por página</li>
+    </ul>
+    <img src="https://picsum.photos/id/0/800/350" alt="Estrutura base do HTML" class="ilustracao">
+</section>
+
+<section>
+    <h2>Texto e Títulos com aura do 67 e for-two</h2>
+    <p><span class="tag">&lt;h1&gt; a &lt;h6&gt;</span> → Títulos por importância (apenas 1 &lt;h1&gt; por página)</p>
+    <p><span class="tag">&lt;p&gt;</span> → Parágrafo de texto</p>
+    <p><span class="tag">&lt;strong&gt;</span> → Destaque forte (negrito semântico)</p>
+    <p><span class="tag">&lt;em&gt;</span> → Ênfase (itálico semântico)</p>
+    <div class="exemplo">
+        Exemplo: &lt;h1&gt;Meu Site&lt;/h1&gt; &lt;p&gt;Texto aqui&lt;/p&gt;
+    </div>
+    <img src="https://picsum.photos/id/24/800/350" alt="Formatação de texto" class="ilustracao">
+</section>
+
+<section>
+    <h2>Como tacar links e mídias aurudas</h2>
+    <p><span class="tag">&lt;a href="url"&gt;</span> → Cria links</p>
+    <p><span class="tag">&lt;img src="foto.jpg" alt="descrição"&gt;</span> → Adiciona imagens</p>
+    <p><span class="tag">&lt;ul&gt;&lt;li&gt;</span> → Lista sem ordem</p>
+    <p><span class="tag">&lt;ol&gt;&lt;li&gt;</span> → Lista numerada</p>
+    <img src="https://picsum.photos/id/64/800/350" alt="Exemplo de imagem e link" class="ilustracao">
+</section>
+
+<section>
+    <h2>Layout semântico sem aura 😒</h2>
+    <p><span class="tag">&lt;header&gt;</span> → Cabeçalho</p>
+    <p><span class="tag">&lt;nav&gt;</span> → Menu</p>
+    <p><span class="tag">&lt;main&gt;</span> → Conteúdo principal</p>
+    <p><span class="tag">&lt;section&gt;</span> → Seção temática</p>
+    <p><span class="tag">&lt;footer&gt;</span> → Rodapé</p>
+    <p><span class="tag">&lt;div&gt;</span> → Agrupamento genérico</p>
+    <img src="https://picsum.photos/id/180/800/350" alt="Layout semântico" class="ilustracao">
+</section>
+
+<section>
+    <h2>Formulários para CLT</h2>
+    <p><span class="tag">&lt;form&gt;</span> → Área de envio de dados</p>
+    <p><span class="tag">&lt;input&gt;</span> → Campos de texto, botões etc.</p>
+    <p><span class="tag">&lt;button&gt;</span> → Botão de ação</p>
+    <div class="exemplo">
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" placeholder="Nome"&gt;<br>
+        &nbsp;&nbsp;&lt;button&gt;Enviar&lt;/button&gt;<br>
+        &lt;/form&gt;
+    </div>
+</section>
+
+<footer>
+    Guia explicando as tags de um html em navegadores e dispositivos aurudos ✅
+</footer>
+
+<script>
+    const btnGuia = document.getElementById('btnGuiaRapido');
+    const guiaRapido = document.getElementById('guiaRapido');
+    let guiaVisivel = false;
+
+    btnGuia.addEventListener('click', () => {
+        guiaVisivel = !guiaVisivel;
+        guiaRapido.classList.toggle('mostrar', guiaVisivel);
+        btnGuia.textContent = guiaVisivel ? 'Fechar o resumo aurudo 67' : 'Resumo brabo aurudo';
+    });
+</script>
+
+</body>
+</html>
