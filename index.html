@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Guia HTML - Tags Principais e Uso</title>
+    <title>Guia de como fazer o HTML ter AURA</title>
     <style>
         * {
             margin: 0;
@@ -222,6 +222,14 @@
         <li>Para que serve: Todo o que aparece na tela</li>
         <li>Como usar: Apenas uma vez por página</li>
     </ul>
+    <div class="exemplo">
+        <strong>Exemplo completo:</strong><br>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="pt-BR"&gt;<br>
+        &nbsp;&nbsp;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Minha Página&lt;/title&gt;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&lt;body&gt;&lt;p&gt;Olá, mundo!&lt;/p&gt;&lt;/body&gt;<br>
+        &lt;/html&gt;
+    </div>
     <img src="https://picsum.photos/id/0/800/350" alt="Estrutura base do HTML" class="ilustracao">
 </section>
 
@@ -232,7 +240,10 @@
     <p><span class="tag">&lt;strong&gt;</span> → Destaque forte (negrito semântico)</p>
     <p><span class="tag">&lt;em&gt;</span> → Ênfase (itálico semântico)</p>
     <div class="exemplo">
-        Exemplo: &lt;h1&gt;Meu Site&lt;/h1&gt; &lt;p&gt;Texto aqui&lt;/p&gt;
+        <strong>Exemplo:</strong><br>
+        &lt;h1&gt;Título Principal&lt;/h1&gt;<br>
+        &lt;h2&gt;Subtítulo&lt;/h2&gt;<br>
+        &lt;p&gt;Este é um &lt;strong&gt;texto importante&lt;/strong&gt; e este é &lt;em&gt;com ênfase&lt;/em&gt;.&lt;/p&gt;
     </div>
     <img src="https://picsum.photos/id/24/800/350" alt="Formatação de texto" class="ilustracao">
 </section>
@@ -243,6 +254,12 @@
     <p><span class="tag">&lt;img src="foto.jpg" alt="descrição"&gt;</span> → Adiciona imagens</p>
     <p><span class="tag">&lt;ul&gt;&lt;li&gt;</span> → Lista sem ordem</p>
     <p><span class="tag">&lt;ol&gt;&lt;li&gt;</span> → Lista numerada</p>
+    <div class="exemplo">
+        <strong>Exemplo:</strong><br>
+        &lt;a href="https://google.com"&gt;Acessar o Google&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+        &lt;img src="logo.png" alt="Logotipo da marca"&gt;&lt;br&gt;&lt;br&gt;
+        &lt;ul&gt;&lt;li&gt;Pão&lt;/li&gt;&lt;li&gt;Leite&lt;/li&gt;&lt;/ul&gt;
+    </div>
     <img src="https://picsum.photos/id/64/800/350" alt="Exemplo de imagem e link" class="ilustracao">
 </section>
 
@@ -254,6 +271,13 @@
     <p><span class="tag">&lt;section&gt;</span> → Seção temática</p>
     <p><span class="tag">&lt;footer&gt;</span> → Rodapé</p>
     <p><span class="tag">&lt;div&gt;</span> → Agrupamento genérico</p>
+    <div class="exemplo">
+        <strong>Exemplo:</strong><br>
+        &lt;header&gt;Logo e Nome do Site&lt;/header&gt;&lt;br&gt;
+        &lt;nav&gt;Início | Sobre | Contato&lt;/nav&gt;&lt;br&gt;
+        &lt;main&gt;&lt;section&gt;Conteúdo da página&lt;/section&gt;&lt;/main&gt;&lt;br&gt;
+        &lt;footer&gt;© 2026 - Todos os direitos reservados&lt;/footer&gt;
+    </div>
     <img src="https://picsum.photos/id/180/800/350" alt="Layout semântico" class="ilustracao">
 </section>
 
@@ -263,9 +287,11 @@
     <p><span class="tag">&lt;input&gt;</span> → Campos de texto, botões etc.</p>
     <p><span class="tag">&lt;button&gt;</span> → Botão de ação</p>
     <div class="exemplo">
-        &lt;form&gt;<br>
-        &nbsp;&nbsp;&lt;input type="text" placeholder="Nome"&gt;<br>
-        &nbsp;&nbsp;&lt;button&gt;Enviar&lt;/button&gt;<br>
+        <strong>Exemplo:</strong><br>
+        &lt;form&gt;&lt;br&gt;
+        &nbsp;&nbsp;&lt;input type="text" placeholder="Digite seu nome"&gt;&lt;br&gt;&lt;br&gt;
+        &nbsp;&nbsp;&lt;input type="email" placeholder="Digite seu e-mail"&gt;&lt;br&gt;&lt;br&gt;
+        &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar Formulário&lt;/button&gt;&lt;br&gt;
         &lt;/form&gt;
     </div>
 </section>
